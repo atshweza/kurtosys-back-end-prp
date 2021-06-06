@@ -26,6 +26,8 @@ class ArtistController {
       const resp = await this.service.searchArtist(searchText.toString());
       response.send(resp);
     };
+
+    response.status(400).send('searchText is Required!');
   }
 }
 

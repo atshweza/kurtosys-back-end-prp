@@ -25,6 +25,8 @@ class ArtistAlbumController {
       const resp = await this.service.getArtistAlbum(parseInt(artistId.toString()))
       response.send(resp);
     };
+
+    response.status(400).send('artistId is Required!');
   }
 }
 
